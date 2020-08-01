@@ -1,0 +1,21 @@
+if game.PlaceId == 4580204640 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Jaaaaay2/MahScriptHub/master/STK"))()
+elseif game.PlaceId == 5202597474 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Jaaaaay2/MahScriptHub/master/COTC"))()
+print("\nCredits to\nDenosaur For the UI")
+elseif game.PlaceId == 698448212 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/notclosure/Robeats-autoplayer/master/Code.lua"))()
+print("\nCredits to\nclosure on v3rmillion")
+elseif game.PlaceId == 4872321990 then
+loadstring(game:HttpGet("https://system-exodus.com/scripts/Islands/Islands.lua",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+elseif game.PlaceId == 5098929086 then
+loadstring(game:HttpGet("https://vortexcommunity.xyz/Scripts/Tapping.lua"))()
+elseif game.PlaceId == 3851622790 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Jaaaaay2/MahScriptHub/master/BreakInLobby"))()
+elseif game.PlaceId == 4620170611 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Jaaaaay2/MahScriptHub/master/BreakIn"))()
+elseif game.PlaceId == game.PlaceId then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Jaaaaay2/MahScriptHub/master/Universal"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end
