@@ -15,6 +15,8 @@ elseif game.PlaceId == 3851622790 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Jaaaaay2/MahScriptHub/master/BreakInLobby"))()
 elseif game.PlaceId == 4620170611 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Jaaaaay2/MahScriptHub/master/BreakIn"))()
+elseif game.PlaceId == 2693023319 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Jaaaaay2/MahScriptHub/master/Expedition%20Antarctica"))()
 elseif game.PlaceId == game.PlaceId then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Jaaaaay2/MahScriptHub/master/Universal"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
