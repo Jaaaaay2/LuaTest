@@ -4,9 +4,13 @@ elseif game.PlaceId == 5202597474 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Jaaaaay2/MahScriptHub/master/COTC"))()
 print("\nCredits to\nDenosaur For the UI")
 elseif game.PlaceId == 698448212 then
+loadstring(game:GetObjects("rbxassetid://5490706646")[1].Source)()
+wait(4.5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/notclosure/Robeats-autoplayer/master/Code.lua"))()
 print("\nCredits to\nclosure on v3rmillion")
 elseif game.PlaceId == 4872321990 then
+loadstring(game:GetObjects("rbxassetid://5490706646")[1].Source)()
+wait(4.5)
 loadstring(game:HttpGet("https://system-exodus.com/scripts/Islands/Islands.lua",true))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 elseif game.PlaceId == 5098929086 then
@@ -20,9 +24,13 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Jaaaaay2/MahScriptHub
 elseif game.PlaceId == 5244411056 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Jaaaaay2/MahScriptHub/master/BloxyBingoUI"))()
 elseif game.PlaceId == 5072973528 then
+loadstring(game:GetObjects("rbxassetid://5490706646")[1].Source)()
+wait(4.5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Jaaaaay2/MahScriptHub/master/Universal"))()
 warn("AFK")
 elseif game.PlaceId == game.PlaceId then
+loadstring(game:GetObjects("rbxassetid://5490706646")[1].Source)()
+wait(4.5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Jaaaaay2/MahScriptHub/master/Universal"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 end
