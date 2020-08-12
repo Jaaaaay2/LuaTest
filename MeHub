@@ -30,7 +30,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Jaaaaay2/MahScriptHub
 warn("AFK")
 elseif game.PlaceId == 920587237 then
 loadstring(game:GetObjects("rbxassetid://5490706646")[1].Source)()
-wait(0.5)
+wait(4.5)
 loadstring(game:HttpGet("https://pastebin.com/raw/Z3iAXASr", true))()
 elseif game.PlaceId == 3126992939 then
 loadstring(game:GetObjects("rbxassetid://5490706646")[1].Source)()
@@ -40,6 +40,10 @@ elseif game.PlaceId == 3823781113 then
 loadstring(game:GetObjects("rbxassetid://5490706646")[1].Source)()
 wait(4.5)
 loadstring(game:HttpGet("https://pastebin.com/raw/4jHBeTtf",true))()
+elseif game.PlaceId == 2512643572 then
+loadstring(game:GetObjects("rbxassetid://5490706646")[1].Source)()
+wait(4.5)
+loadstring(game:HttpGet(("http://roguefamily.com/script/streleziaBGSbeta/script"),true))()
 elseif game.PlaceId == game.PlaceId then
 loadstring(game:GetObjects("rbxassetid://5490706646")[1].Source)()
 wait(4.5)
