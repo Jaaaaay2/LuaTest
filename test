@@ -119,6 +119,6 @@ wait(1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-478.862915, 285.932404, -768.654114)
 virtualUser:SetKeyDown('0x5d')
 virtualUser:SetKeyUp('0x5d')
-
+wait(0.1)
 virtualUser:SetKeyDown('0x74')
 virtualUser:SetKeyUp('0x74')
