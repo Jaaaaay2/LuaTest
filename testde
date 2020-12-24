@@ -5,7 +5,7 @@ local args = {
 
 game:GetService("ReplicatedStorage").Remotes.VehicleEvent:FireServer(unpack(args))
 
-wait(1)
+wait(2.5)
  
 for i,v in pairs(DropOffs) do
        if v.Main.Beam.Enabled == true then
