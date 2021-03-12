@@ -1,0 +1,119 @@
+if game.PlaceId == 4042427666 then
+
+    local player = game:GetService('Players').LocalPlayer
+
+ss2:Dropdown("Dimension",{"Dimension 2", "Dimension 3", "Dimension 4", "Dimension 5", "Tournament Dimension"},function(t)
+
+    player.Character.HumanoidRootPart.CFrame = CFrame.new(3572.78687, 59.9999886, -105.535889)
+    wait(1.5)
+    for k,v in next,game:GetService("Workspace").DimensionPortal:GetDescendants() do 
+        if v.Name == "ClickDetector" and v.Parent.Parent.Name == t then
+            player.Character.HumanoidRootPart.CFrame = v.Parent.CFrame + Vector3.new(2,2,0)
+            --fireclickdetector(v)
+            wait(1.5)
+            local args = {
+                [1] = "Portal",
+                [2] = {
+                    ["PlaceID"] = t
+                }
+            }
+            
+            game:GetService("ReplicatedStorage").RSPackage.Events.GeneralFunction:InvokeServer(unpack(args))
+        end
+    end
+
+end)
+
+elseif game.PlaceId == 5113678354 then
+
+    ss2:Dropdown("Dimension",{"Dimension 1", "Dimension 3", "Dimension 4", "Dimension 5", "Tournament Dimension"},function(t)
+    player.Character.HumanoidRootPart.CFrame = CFrame.new(554.137451, 56.5079231, -309.66806)    
+    wait(1.5)
+    for k,v in next,game:GetService("Workspace").DimensionPortal:GetDescendants() do 
+        if v.Name == "ClickDetector" and v.Parent.Parent.Name == t then
+            player.Character.HumanoidRootPart.CFrame = v.Parent.CFrame + Vector3.new(2,2,0)
+            --fireclickdetector(v)
+            wait(1.5)
+            local args = {
+                [1] = "Portal",
+                [2] = {
+                    ["PlaceID"] = t
+                }
+            }
+            
+            game:GetService("ReplicatedStorage").RSPackage.Events.GeneralFunction:InvokeServer(unpack(args))
+        end
+    end
+
+end)
+
+elseif game.PlaceId == 5113680396 then
+
+ss2:Dropdown("Dimension",{"Dimension 1", "Dimension 2", "Dimension 4", "Dimension 5", "Tournament Dimension"},function(t)
+    player.Character.HumanoidRootPart.CFrame = CFrame.new(79.5033646, 56.5079231, 76.6112061)    
+    wait(1.5)
+    for k,v in next,game:GetService("Workspace").DimensionPortal:GetDescendants() do 
+        if v.Name == "ClickDetector" and v.Parent.Parent.Name == t then
+            player.Character.HumanoidRootPart.CFrame = v.Parent.CFrame + Vector3.new(2,2,0)
+            --fireclickdetector(v)
+            wait(1.5)
+            local args = {
+                [1] = "Portal",
+                [2] = {
+                    ["PlaceID"] = t
+                }
+            }
+            
+            game:GetService("ReplicatedStorage").RSPackage.Events.GeneralFunction:InvokeServer(unpack(args))
+        end
+    end
+
+end)
+
+elseif game.PlaceId == 5445525505 then
+
+ss2:Dropdown("Dimension",{"Dimension 1", "Dimension 2", "Dimension 3", "Dimension 5", "Tournament Dimension"},function(t)
+    player.Character.HumanoidRootPart.CFrame = CFrame.new(-1305.71106, 85.4299393, -246.323242)    
+    wait(1.5)
+    for k,v in next,game:GetService("Workspace").DimensionPortal:GetDescendants() do 
+        if v.Name == "ClickDetector" and v.Parent.Parent.Name == t then
+            player.Character.HumanoidRootPart.CFrame = v.Parent.CFrame + Vector3.new(2,2,0)
+            --fireclickdetector(v)
+            wait(1.5)
+            local args = {
+                [1] = "Portal",
+                [2] = {
+                    ["PlaceID"] = t
+                }
+            }
+            
+            game:GetService("ReplicatedStorage").RSPackage.Events.GeneralFunction:InvokeServer(unpack(args))
+        end
+    end
+
+end)
+
+elseif game.PlaceId == 6479720355 then
+
+ss2:Dropdown("Dimension",{"Dimension 1", "Dimension 2", "Dimension 3", "Dimension 4", "Tournament Dimension"},function(t)
+    player.Character.HumanoidRootPart.CFrame = CFrame.new(-823.57959, 29.0810032, -1379.17505)    
+    wait(1.5)
+    for k,v in next,game:GetService("Workspace").DimensionPortal:GetDescendants() do 
+        if v.Name == "ClickDetector" and v.Parent.Parent.Name == t then
+            player.Character.HumanoidRootPart.CFrame = v.Parent.CFrame + Vector3.new(2,2,0)
+            --fireclickdetector(v)
+            wait(1.5)
+            local args = {
+                [1] = "Portal",
+                [2] = {
+                    ["PlaceID"] = t
+                }
+            }
+            
+            game:GetService("ReplicatedStorage").RSPackage.Events.GeneralFunction:InvokeServer(unpack(args))
+        end
+    end
+
+end)
+
+end
