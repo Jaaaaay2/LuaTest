@@ -1,3 +1,8 @@
+--[[ 
+All Proper Credits goes to the User
+i just make to gui for it
+--]]
+
 local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/VL"))()
 
 local s = VLib:Window("CS", "Anime Fighting Sim", "AFS")
