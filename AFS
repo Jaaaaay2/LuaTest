@@ -1,0 +1,339 @@
+local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/VL"))()
+
+local s = VLib:Window("CS", "Anime Fighting Sim", "AFS")
+
+local ss = s:Tab("Train")
+
+local ss2 = s:Tab("TP/Modif")
+
+
+ss:Dropdown("Stat",{"Strength", "Durability", "Chakra", "Sword", "Agility","Speed"},function(t)
+
+_G.Test = t
+
+end)
+
+ss:Toggle("Auto Train",function(ToggleVal)
+    _G.toggleAT = ToggleVal
+    
+if _G.Test == "Sword" then
+    while _G.toggleAT do
+        wait()
+        local args = {
+            [1] = "SE",
+            [2] = true
+        }
+    
+        game:GetService("ReplicatedStorage").RSPackage.Events.GeneralEvent:FireServer(unpack(args))    
+        local a = require(game:GetService("Players").LocalPlayer.PlayerGui.Main.MainClient.StatModuleClient)
+            --table.foreach(a.StatKeys,warn) --It prints all the keys
+        a.SendToServer("Sword")
+    end
+    else
+    while _G.toggleAT do
+        wait()
+        local a = require(game:GetService("Players").LocalPlayer.PlayerGui.Main.MainClient.StatModuleClient)
+        --table.foreach(a.StatKeys,warn) --It prints all the keys
+        a.SendToServer(_G.Test)
+    end
+end
+end)
+
+ss:Toggle("Stay in Place", function(ToggleStay)
+
+    _G.Stay = ToggleStay
+
+    local old = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame
+
+    while _G.Stay do
+        wait(2)
+        if _G.toggleAT == true then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = old
+        else
+        end
+    end
+
+end)
+
+ss:Label("Stat Upgrade")
+
+ss:Dropdown("Stat",{"Strength", "Durability", "Chakra", "Sword", "Agility","Speed"},function(su)
+    _G.SUD = su
+end)
+
+ss:Toggle("Auto Upgrade", function(ToggleSU)
+
+    _G.SUT = ToggleSU
+
+    while _G.SUT do
+        wait(2)
+        local args = {
+            [1] = "Upgrade",
+            [2] = _G.SUD
+        }
+        
+        game:GetService("ReplicatedStorage").RSPackage.Events.GeneralFunction:InvokeServer(unpack(args))
+    end
+
+end)
+
+ss:Button("One Time Upgrade", function()
+
+    local args = {
+        [1] = "Upgrade",
+        [2] = _G.SUD
+    }
+    
+    game:GetService("ReplicatedStorage").RSPackage.Events.GeneralFunction:InvokeServer(unpack(args))
+
+end)
+
+ss2:Label("Teleports")
+
+ss2:Button("Dragon Ball",function()
+    
+    local old = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    
+    for _,i in pairs(game.Workspace.MouseIgnore:GetChildren()) do
+        if i:FindFirstChild("ClickPart") then
+          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = i.ClickPart.CFrame
+          break
+        end
+    end
+
+    if game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame == old then
+        game.StarterGui:SetCore("SendNotification", {
+        Title = "No Dragon Ball Found",
+        Text = "Dragon Ball still not spawned",
+        Icon = "",
+        Duration = 2,
+        })
+    end
+end)
+
+ss2:Button("Devil Fruit", function()
+    local old = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    local player = game:GetService('Players').LocalPlayer
+
+    for k,v in next,game:GetService("Workspace").MiscModels:GetDescendants() do 
+        if v.Name == "ManualWeld" and v.Parent.Parent.Name == "Model" then
+            player.Character.HumanoidRootPart.CFrame = v.Parent.CFrame + Vector3.new(0,2,0)
+        end
+    end
+
+    if game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame == old then
+        game.StarterGui:SetCore("SendNotification", {
+        Title = "No Devil Fruit Found",
+        Text = "Devil Fruit still not spawned",
+        Icon = "",
+        Duration = 2,
+        })
+    end
+end)
+
+if game.PlaceId == 4042427666 then
+
+    local player = game:GetService('Players').LocalPlayer
+
+ss2:Dropdown("Dimension",{"Dimension 2", "Dimension 3", "Dimension 4", "Dimension 5", "Tournament Dimension"},function(t)
+
+    player.Character.HumanoidRootPart.CFrame = CFrame.new(3572.78687, 59.9999886, -105.535889)
+    wait(1.5)
+    for k,v in next,game:GetService("Workspace").DimensionPortal:GetDescendants() do 
+        if v.Name == "ClickDetector" and v.Parent.Parent.Name == t then
+            player.Character.HumanoidRootPart.CFrame = v.Parent.CFrame + Vector3.new(2,2,0)
+            --fireclickdetector(v)
+            wait(1.5)
+            local args = {
+                [1] = "Portal",
+                [2] = {
+                    ["PlaceID"] = t
+                }
+            }
+            
+            game:GetService("ReplicatedStorage").RSPackage.Events.GeneralFunction:InvokeServer(unpack(args))
+        end
+    end
+
+end)
+
+elseif game.PlaceId == 5113678354 then
+
+    ss2:Dropdown("Dimension",{"Dimension 1", "Dimension 3", "Dimension 4", "Dimension 5", "Tournament Dimension"},function(t)
+    player.Character.HumanoidRootPart.CFrame = CFrame.new(554.137451, 56.5079231, -309.66806)    
+    wait(1.5)
+    for k,v in next,game:GetService("Workspace").DimensionPortal:GetDescendants() do 
+        if v.Name == "ClickDetector" and v.Parent.Parent.Name == t then
+            player.Character.HumanoidRootPart.CFrame = v.Parent.CFrame + Vector3.new(2,2,0)
+            --fireclickdetector(v)
+            wait(1.5)
+            local args = {
+                [1] = "Portal",
+                [2] = {
+                    ["PlaceID"] = t
+                }
+            }
+            
+            game:GetService("ReplicatedStorage").RSPackage.Events.GeneralFunction:InvokeServer(unpack(args))
+        end
+    end
+
+end)
+
+elseif game.PlaceId == 5113680396 then
+
+ss2:Dropdown("Dimension",{"Dimension 1", "Dimension 2", "Dimension 4", "Dimension 5", "Tournament Dimension"},function(t)
+    player.Character.HumanoidRootPart.CFrame = CFrame.new(79.5033646, 56.5079231, 76.6112061)    
+    wait(1.5)
+    for k,v in next,game:GetService("Workspace").DimensionPortal:GetDescendants() do 
+        if v.Name == "ClickDetector" and v.Parent.Parent.Name == t then
+            player.Character.HumanoidRootPart.CFrame = v.Parent.CFrame + Vector3.new(2,2,0)
+            --fireclickdetector(v)
+            wait(1.5)
+            local args = {
+                [1] = "Portal",
+                [2] = {
+                    ["PlaceID"] = t
+                }
+            }
+            
+            game:GetService("ReplicatedStorage").RSPackage.Events.GeneralFunction:InvokeServer(unpack(args))
+        end
+    end
+
+end)
+
+elseif game.PlaceId == 5445525505 then
+
+ss2:Dropdown("Dimension",{"Dimension 1", "Dimension 2", "Dimension 3", "Dimension 5", "Tournament Dimension"},function(t)
+    player.Character.HumanoidRootPart.CFrame = CFrame.new(-1305.71106, 85.4299393, -246.323242)    
+    wait(1.5)
+    for k,v in next,game:GetService("Workspace").DimensionPortal:GetDescendants() do 
+        if v.Name == "ClickDetector" and v.Parent.Parent.Name == t then
+            player.Character.HumanoidRootPart.CFrame = v.Parent.CFrame + Vector3.new(2,2,0)
+            --fireclickdetector(v)
+            wait(1.5)
+            local args = {
+                [1] = "Portal",
+                [2] = {
+                    ["PlaceID"] = t
+                }
+            }
+            
+            game:GetService("ReplicatedStorage").RSPackage.Events.GeneralFunction:InvokeServer(unpack(args))
+        end
+    end
+
+end)
+
+elseif game.PlaceId == 6479720355 then
+
+ss2:Dropdown("Dimension",{"Dimension 1", "Dimension 2", "Dimension 3", "Dimension 4", "Tournament Dimension"},function(t)
+    player.Character.HumanoidRootPart.CFrame = CFrame.new(-823.57959, 29.0810032, -1379.17505)    
+    wait(1.5)
+    for k,v in next,game:GetService("Workspace").DimensionPortal:GetDescendants() do 
+        if v.Name == "ClickDetector" and v.Parent.Parent.Name == t then
+            player.Character.HumanoidRootPart.CFrame = v.Parent.CFrame + Vector3.new(2,2,0)
+            --fireclickdetector(v)
+            wait(1.5)
+            local args = {
+                [1] = "Portal",
+                [2] = {
+                    ["PlaceID"] = t
+                }
+            }
+            
+            game:GetService("ReplicatedStorage").RSPackage.Events.GeneralFunction:InvokeServer(unpack(args))
+        end
+    end
+
+end)
+
+end
+
+ss2:Label("Positions")
+
+ss2:Button("Save Position", function()
+
+    local player = game:GetService('Players').LocalPlayer
+
+    _G.SP = player.Character.HumanoidRootPart.CFrame
+
+end)
+
+ss2:Button("Load Position", function()
+
+    local test1 = _G.SP
+    local player = game:GetService('Players').LocalPlayer
+    player.Character.HumanoidRootPart.CFrame = test1
+
+
+end)
+
+ss2:Label("Modifiers")
+
+ss2:Button("Max Legit WalkSpeed", function()
+
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 126
+
+end)
+
+ss2:Button("Max Legit Jump Power", function()
+
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 175
+
+end)
+
+ss2:Textbox("Fly Speed", false,function(fs)
+    local lp = game.Players.LocalPlayer
+    local mc = lp.PlayerGui.Main.MainClient
+    local fly, speedidx
+
+for i, f in pairs(getconnections(lp.CharacterAdded)) do
+    if f.Function and debug.getinfo(f.Function).short_src == mc:GetFullName() then
+        fly = debug.getupvalues(f.Function)[1]
+        for _, v in pairs(debug.getupvalues(fly)) do
+            if v==20 and type(v) == 'number' then
+                speedidx = _
+                break
+            end
+        end
+    end
+end
+
+local function onCharacterAdded()
+	repeat wait() until lp.Character and lp.Character:FindFirstChild('HumanoidRootPart') and lp.Character.HumanoidRootPart:FindFirstChild('BodyPosition')
+	local bp = lp.Character.HumanoidRootPart.BodyPosition
+	bp.Changed:Connect(function(prop)
+		if prop == 'Position' then
+			debug.setupvalue(fly, speedidx or 22, fs)
+		end
+	end)
+end
+lp.CharacterAdded:Connect(onCharacterAdded)
+onCharacterAdded()
+end)
+
+--ss2:Button("Fast Flight", function()
+
+    
+
+--end)
+
+ss2:Slider("Walkspeed",0,200,100,function(ws)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = ws
+end)
+
+ss2:Slider("Jump Power",0,200,100,function(jp)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = jp
+end)
+
+local cs = game.Players.LocalPlayer
+local mc = cs.PlayerGui.Main.MainClient
+
+local t1 = "Welcome "
+local t2 = cs.Name
+
+
+wait(2)
+require(mc.NotifModule).Notify(t1..t2)
