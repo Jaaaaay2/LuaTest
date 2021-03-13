@@ -1,0 +1,26 @@
+if not game:IsLoaded() then
+	game.Loaded:wait()
+end
+
+local LocalPlayer = game:GetService('Players').LocalPlayer
+
+local function waitFor(Parent, Child)
+	if not Parent:FindFirstChild(Child) then
+		repeat
+			Parent.ChildAdded:wait()
+		until Parent:FindFirstChild(Child)
+	end
+	return Parent:FindFirstChild(Child)
+end
+
+waitFor(LocalPlayer,'PlayerGui')
+waitFor(LocalPlayer.PlayerGui,'Intro')
+waitFor(LocalPlayer.PlayerGui.Intro,'PlayButton')
+if not (LocalPlayer.PlayerGui.Intro.PlayButton.Size.X.Scale >= .4) or not (LocalPlayer.PlayerGui.Intro.PlayButton.Size.Y.Scale >= 0.075) then
+	repeat
+		LocalPlayer.PlayerGui.Intro.PlayButton:GetPropertyChangedSignal'Size':wait()
+	until LocalPlayer.PlayerGui.Intro.PlayButton.Size.X.Scale >= .4 and LocalPlayer.PlayerGui.Intro.PlayButton.Size.Y.Scale >= 0.075
+end
+for _, v in pairs(getconnections(LocalPlayer.PlayerGui.Intro.PlayButton.MouseButton1Click)) do
+	v:Fire()
+end
